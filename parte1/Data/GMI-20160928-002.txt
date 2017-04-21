@@ -1,0 +1,15 @@
+cod_matri;alumno;prog2;pps;bbdd;adw
+108122;Donald Taylor;92;91;90;80
+290723;Laura Scott;91;93;90;90
+406224;Nancy Davis;80;79;60;60
+212326;Paul Williams;82;93;90;90
+378127;Sharon Wright;89;96;80;90
+196629;Richard Lee;90;98;90;90
+594630;Jeff Edwards;90;95;80;90
+999999;Santiago Eibe;99;99;99;99
+867432;Linda Rodriguez;89;77;80;80
+614033;Michelle Martinez;77;80;80;80
+884634;Maria Roberts;69;68;60;60
+881635;Robert Clark;84;94;80;80
+341336;George Walker;98;84;90;90
+519638;Lisa Smith;81;70;60;70
