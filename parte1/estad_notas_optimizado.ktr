@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>estad_notas</name>
+    <name>estad_notas_optimizado</name>
     <description/>
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
-    <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
     </parameters>
@@ -428,10 +427,10 @@
     <clusterschemas>
     </clusterschemas>
     <created_user>-</created_user>
-    <created_date>2017&#x2f;05&#x2f;12 17&#x3a;04&#x3a;53.063</created_date>
+    <created_date>2017&#x2f;05&#x2f;16 21&#x3a;43&#x3a;55.340</created_date>
     <modified_user>-</modified_user>
-    <modified_date>2017&#x2f;05&#x2f;12 17&#x3a;04&#x3a;53.063</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+    <modified_date>2017&#x2f;05&#x2f;16 21&#x3a;43&#x3a;55.340</modified_date>
+    <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
@@ -465,88 +464,235 @@
   </connection>
   <order>
     <hop>
-      <from>Database lookup</from>
-      <to>Group by</to>
+      <from>Text file input 3</from>
+      <to>Modified Java Script Value 3</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Database lookup 2</from>
-      <to>Group by 2</to>
+      <from>Split field to rows</from>
+      <to>Modified Java Script Value 2 3 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Database lookup 2 2</from>
-      <to>Group by 2 2</to>
+      <from>Modified Java Script Value 3</from>
+      <to>Split field to rows</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Database lookup 2 3</from>
-      <to>Group by 2 3</to>
+      <from>Database lookup 2 3 2</from>
+      <to>Group by 2 3 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Group by</from>
-      <to>Insert &#x2f; Update</to>
+      <from>Group by 2 3 2</from>
+      <to>Insert &#x2f; Update 2 3 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Group by 2</from>
-      <to>Insert &#x2f; Update 2</to>
+      <from>Modified Java Script Value 2 3 2</from>
+      <to>Database lookup 2 3 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Group by 2 2</from>
-      <to>Insert &#x2f; Update 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Group by 2 3</from>
-      <to>Insert &#x2f; Update 2 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Modified Java Script Value</from>
-      <to>Database lookup</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Modified Java Script Value 2</from>
-      <to>Database lookup 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Modified Java Script Value 2 2</from>
-      <to>Database lookup 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Modified Java Script Value 2 3</from>
-      <to>Database lookup 2 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Text file input</from>
-      <to>Modified Java Script Value</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Text file input</from>
-      <to>Modified Java Script Value 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Text file input</from>
-      <to>Modified Java Script Value 2 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Text file input</from>
-      <to>Modified Java Script Value 2 3</to>
+      <from>Text file input 2</from>
+      <to>Modified Java Script Value 2 3 2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Database lookup</name>
+    <name>Text file input 3</name>
+    <type>TextFileInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <accept_filenames>N</accept_filenames>
+    <passing_through_fields>N</passing_through_fields>
+    <accept_field/>
+    <accept_stepname/>
+    <separator>&#x29;</separator>
+    <enclosure>&#x22;</enclosure>
+    <enclosure_breaks>N</enclosure_breaks>
+    <escapechar/>
+    <header>Y</header>
+    <nr_headerlines>1</nr_headerlines>
+    <footer>N</footer>
+    <nr_footerlines>1</nr_footerlines>
+    <line_wrapped>N</line_wrapped>
+    <nr_wraps>1</nr_wraps>
+    <layout_paged>N</layout_paged>
+    <nr_lines_per_page>80</nr_lines_per_page>
+    <nr_lines_doc_header>0</nr_lines_doc_header>
+    <noempty>Y</noempty>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <rownumByFile>N</rownumByFile>
+    <rownum_field/>
+    <format>mixed</format>
+    <encoding/>
+    <add_to_result_filenames>Y</add_to_result_filenames>
+    <file>
+      <name>.&#x2f;Data</name>
+      <filemask>.&#x2a;&#x5c;.txt</filemask>
+      <exclude_filemask/>
+      <file_required>Y</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+      <type>CSV</type>
+      <compression>None</compression>
+    </file>
+    <filters>
+    </filters>
+    <fields>
+      <field>
+        <name>header</name>
+        <type>String</type>
+        <format/>
+        <currency>&#x24;</currency>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif>-</nullif>
+        <ifnull/>
+        <position>-1</position>
+        <length>37</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>1</limit>
+    <error_ignored>N</error_ignored>
+    <skip_bad_files>N</skip_bad_files>
+    <file_error_field/>
+    <file_error_message_field/>
+    <error_line_skipped>N</error_line_skipped>
+    <error_count_field/>
+    <error_fields_field/>
+    <error_text_field/>
+    <bad_line_files_destination_directory/>
+    <bad_line_files_extension>warning</bad_line_files_extension>
+    <error_line_files_destination_directory/>
+    <error_line_files_extension>error</error_line_files_extension>
+    <line_number_files_destination_directory/>
+    <line_number_files_extension>line</line_number_files_extension>
+    <date_format_lenient>Y</date_format_lenient>
+    <date_format_locale>es_ES</date_format_locale>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>96</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Split field to rows</name>
+    <type>SplitFieldToRows3</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+   <splitfield>arrayNombre</splitfield>
+   <delimiter>&#x3b;</delimiter>
+   <newfield>mascadito</newfield>
+   <rownum>N</rownum>
+   <rownum_field/>
+   <resetrownumber>Y</resetrownumber>
+   <delimiter_is_regex>N</delimiter_is_regex>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>416</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Modified Java Script Value 3</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;var arrayN &#x3d; header.split&#x28;&#x22;&#x3b;&#x22;&#x29;&#xa;var arrayNombre &#x3d; arrayN.slice&#x28;2,arrayN.length&#x29;&#x3b;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>arrayNombre</name>
+        <rename>arrayNombre</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>256</xloc>
+      <yloc>80</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Database lookup 2 3 2</name>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
@@ -567,7 +713,7 @@
       <fail_on_multiple>N</fail_on_multiple>
       <eat_row_on_failure>N</eat_row_on_failure>
       <key>
-        <name>nombre</name>
+        <name>mascadito</name>
         <field>nombre</field>
         <condition>LIKE</condition>
         <name2/>
@@ -587,158 +733,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>560</xloc>
-      <yloc>112</yloc>
+      <xloc>816</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Database lookup 2</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>NotasLab</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
-      <table>asignaturas</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>nombre</name>
-        <field>nombre</field>
-        <condition>LIKE</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>cod_asig</name>
-        <rename>cod_asig</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>560</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Database lookup 2 2</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>NotasLab</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
-      <table>asignaturas</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>nombre</name>
-        <field>nombre</field>
-        <condition>LIKE</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>cod_asig</name>
-        <rename>cod_asig</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>560</xloc>
-      <yloc>304</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Database lookup 2 3</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>NotasLab</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
-      <table>asignaturas</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>nombre</name>
-        <field>nombre</field>
-        <condition>LIKE</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>cod_asig</name>
-        <rename>cod_asig</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>560</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Group by</name>
+    <name>Group by 2 3 2</name>
     <type>GroupBy</type>
     <description/>
     <distribute>Y</distribute>
@@ -789,188 +791,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>768</xloc>
-      <yloc>112</yloc>
+      <xloc>1024</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Group by 2</name>
-    <type>GroupBy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-      <all_rows>Y</all_rows>
-      <ignore_aggregate>N</ignore_aggregate>
-      <field_ignore/>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>grp</prefix>
-      <add_linenr>N</add_linenr>
-      <linenr_fieldname/>
-      <give_back_row>N</give_back_row>
-      <group>
-        <field>
-          <name>cod_asig</name>
-        </field>
-      </group>
-      <fields>
-        <field>
-          <aggregate>notMin</aggregate>
-          <subject>nota</subject>
-          <type>MIN</type>
-          <valuefield/>
-        </field>
-        <field>
-          <aggregate>notMax</aggregate>
-          <subject>nota</subject>
-          <type>MAX</type>
-          <valuefield/>
-        </field>
-        <field>
-          <aggregate>notMed</aggregate>
-          <subject>nota</subject>
-          <type>AVERAGE</type>
-          <valuefield/>
-        </field>
-      </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>768</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Group by 2 2</name>
-    <type>GroupBy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-      <all_rows>Y</all_rows>
-      <ignore_aggregate>N</ignore_aggregate>
-      <field_ignore/>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>grp</prefix>
-      <add_linenr>N</add_linenr>
-      <linenr_fieldname/>
-      <give_back_row>N</give_back_row>
-      <group>
-        <field>
-          <name>cod_asig</name>
-        </field>
-      </group>
-      <fields>
-        <field>
-          <aggregate>notMin</aggregate>
-          <subject>nota</subject>
-          <type>MIN</type>
-          <valuefield/>
-        </field>
-        <field>
-          <aggregate>notMax</aggregate>
-          <subject>nota</subject>
-          <type>MAX</type>
-          <valuefield/>
-        </field>
-        <field>
-          <aggregate>notMed</aggregate>
-          <subject>nota</subject>
-          <type>AVERAGE</type>
-          <valuefield/>
-        </field>
-      </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>768</xloc>
-      <yloc>304</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Group by 2 3</name>
-    <type>GroupBy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-      <all_rows>Y</all_rows>
-      <ignore_aggregate>N</ignore_aggregate>
-      <field_ignore/>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>grp</prefix>
-      <add_linenr>N</add_linenr>
-      <linenr_fieldname/>
-      <give_back_row>N</give_back_row>
-      <group>
-        <field>
-          <name>cod_asig</name>
-        </field>
-      </group>
-      <fields>
-        <field>
-          <aggregate>notMin</aggregate>
-          <subject>nota</subject>
-          <type>MIN</type>
-          <valuefield/>
-        </field>
-        <field>
-          <aggregate>notMax</aggregate>
-          <subject>nota</subject>
-          <type>MAX</type>
-          <valuefield/>
-        </field>
-        <field>
-          <aggregate>notMed</aggregate>
-          <subject>nota</subject>
-          <type>AVERAGE</type>
-          <valuefield/>
-        </field>
-      </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>768</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Insert &#x2f; Update</name>
+    <name>Insert &#x2f; Update 2 3 2</name>
     <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
@@ -994,7 +822,7 @@
       </key>
       <value>
         <name>nombre</name>
-        <rename>nombre</rename>
+        <rename>mascadito</rename>
         <update>N</update>
       </value>
       <value>
@@ -1026,203 +854,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>976</xloc>
-      <yloc>112</yloc>
+      <xloc>1232</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Insert &#x2f; Update 2</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>NotasLab</connection>
-    <commit>1000</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
-      <table>asignaturas</table>
-      <key>
-        <name>cod_asig</name>
-        <field>cod_asig</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>nombre</name>
-        <rename>nombre</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>cod_asig</name>
-        <rename>cod_asig</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>notmin</name>
-        <rename>notMin</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>notmax</name>
-        <rename>notMax</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>notmed</name>
-        <rename>notMed</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>976</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Insert &#x2f; Update 2 2</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>NotasLab</connection>
-    <commit>1000</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
-      <table>asignaturas</table>
-      <key>
-        <name>cod_asig</name>
-        <field>cod_asig</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>nombre</name>
-        <rename>nombre</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>cod_asig</name>
-        <rename>cod_asig</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>notmin</name>
-        <rename>notMin</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>notmax</name>
-        <rename>notMax</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>notmed</name>
-        <rename>notMed</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>976</xloc>
-      <yloc>304</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Insert &#x2f; Update 2 3</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>NotasLab</connection>
-    <commit>1000</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
-      <table>asignaturas</table>
-      <key>
-        <name>cod_asig</name>
-        <field>cod_asig</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>nombre</name>
-        <rename>nombre</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>cod_asig</name>
-        <rename>cod_asig</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>notmin</name>
-        <rename>notMin</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>notmax</name>
-        <rename>notMax</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>notmed</name>
-        <rename>notMed</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>976</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Modified Java Script Value</name>
+    <name>Modified Java Script Value 2 3 2</name>
     <type>ScriptValueMod</type>
     <description/>
     <distribute>Y</distribute>
@@ -1236,16 +875,10 @@
     <optimizationLevel>9</optimizationLevel>
     <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;var nombre &#x3d; &#x22;Prog2&#x22;&#xa;var nota &#x3d; prog2</jsScript_script>
-      </jsScript>    </jsScripts>    <fields>      <field>        <name>nombre</name>
-        <rename>nombre</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>      <field>        <name>nota</name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;var nota &#x3d; mascadito</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>nota</name>
         <rename>nota</rename>
-        <type>Integer</type>
+        <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
         <replace>N</replace>
@@ -1257,140 +890,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>352</xloc>
-      <yloc>112</yloc>
+      <xloc>608</xloc>
+      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Modified Java Script Value 2</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;var nombre &#x3d; &#x22;PPS&#x22;&#xa;var nota &#x3d; pps</jsScript_script>
-      </jsScript>    </jsScripts>    <fields>      <field>        <name>nombre</name>
-        <rename>nombre</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>      <field>        <name>nota</name>
-        <rename>nota</rename>
-        <type>Integer</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>    </fields>    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>352</xloc>
-      <yloc>208</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Modified Java Script Value 2 2</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;var nombre &#x3d; &#x22;BBDD&#x22;&#xa;var nota &#x3d; bbdd</jsScript_script>
-      </jsScript>    </jsScripts>    <fields>      <field>        <name>nombre</name>
-        <rename>nombre</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>      <field>        <name>nota</name>
-        <rename>nota</rename>
-        <type>Integer</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>    </fields>    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>352</xloc>
-      <yloc>304</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Modified Java Script Value 2 3</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;var nombre &#x3d; &#x22;ADW&#x22;&#xa;var nota &#x3d; adw</jsScript_script>
-      </jsScript>    </jsScripts>    <fields>      <field>        <name>nombre</name>
-        <rename>nombre</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>      <field>        <name>nota</name>
-        <rename>nota</rename>
-        <type>Integer</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>    </fields>    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>352</xloc>
-      <yloc>400</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Text file input</name>
+    <name>Text file input 2</name>
     <type>TextFileInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -1582,8 +1089,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>128</xloc>
-      <yloc>256</yloc>
+      <xloc>288</xloc>
+      <yloc>352</yloc>
       <draw>Y</draw>
     </GUI>
     </step>

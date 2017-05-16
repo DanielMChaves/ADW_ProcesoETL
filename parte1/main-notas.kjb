@@ -394,8 +394,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>560</xloc>
-      <yloc>260</yloc>
+      <xloc>544</xloc>
+      <yloc>256</yloc>
     </entry>
     <entry>
       <name>carga_alum</name>
@@ -547,7 +547,7 @@
       <xloc>60</xloc>
       <yloc>320</yloc>
       <width>867</width>
-      <heigth>352</heigth>
+      <heigth>356</heigth>
       <fontname>Sans</fontname>
       <fontsize>12</fontsize>
       <fontbold>N</fontbold>
