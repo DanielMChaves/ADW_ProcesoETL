@@ -465,166 +465,36 @@
   </connection>
   <order>
     <hop>
-      <from>Database lookup</from>
-      <to>Number range</to>
+      <from>Database VAlue Lookup 2</from>
+      <to>Mapping &#x28;sub-transformation&#x29;</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Modified Java Script Value</from>
-      <to>Database lookup</to>
+      <from>Database VAlue Lookup 2</from>
+      <to>Mapping &#x28;sub-transformation&#x29; 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Number range</from>
-      <to>Sort rows</to>
+      <from>Database VAlue Lookup 2</from>
+      <to>Mapping &#x28;sub-transformation&#x29; 3</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort rows</from>
-      <to>Add sequence</to>
+      <from>Database VAlue Lookup 2</from>
+      <to>Mapping &#x28;sub-transformation&#x29; 4</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Text file input</from>
-      <to>Database VAlue Lookup 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database VAlue Lookup 2</from>
       <to>Modified Java Script Value</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Add sequence</from>
-      <to>Insert &#x2f; Update</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Add sequence 2</from>
-      <to>Insert &#x2f; Update 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup 2</from>
-      <to>Number range 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Modified Java Script Value 2</from>
-      <to>Database lookup 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Number range 2</from>
-      <to>Sort rows 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows 2</from>
-      <to>Add sequence 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Add sequence 3</from>
-      <to>Insert &#x2f; Update 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup 3</from>
-      <to>Number range 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Modified Java Script Value 3</from>
-      <to>Database lookup 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Number range 3</from>
-      <to>Sort rows 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows 3</from>
-      <to>Add sequence 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Add sequence 4</from>
-      <to>Insert &#x2f; Update 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database lookup 4</from>
-      <to>Number range 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Modified Java Script Value 4</from>
-      <to>Database lookup 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Number range 4</from>
-      <to>Sort rows 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Sort rows 4</from>
-      <to>Add sequence 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database VAlue Lookup 2</from>
-      <to>Modified Java Script Value 2</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database VAlue Lookup 2</from>
-      <to>Modified Java Script Value 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database VAlue Lookup 2</from>
-      <to>Modified Java Script Value 4</to>
+      <from>Modified Java Script Value</from>
+      <to>Database VAlue Lookup 2</to>
       <enabled>Y</enabled>
     </hop>
   </order>
-  <step>
-    <name>Add sequence</name>
-    <type>Sequence</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-      <valuename>notpos</valuename>
-      <use_database>N</use_database>
-      <connection>NotasLab</connection>
-      <schema/>
-      <seqname>SEQ_</seqname>
-      <use_counter>Y</use_counter>
-      <counter_name/>
-      <start_at>1</start_at>
-      <increment_by>1</increment_by>
-      <max_value>999999999</max_value>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>704</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
   <step>
     <name>Database VAlue Lookup 2</name>
     <type>DBLookup</type>
@@ -667,288 +537,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>144</xloc>
+      <xloc>416</xloc>
       <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Database lookup</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>NotasLab</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
-      <table>asignaturas</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>nombre</name>
-        <field>nombre</field>
-        <condition>LIKE</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>cod_asig</name>
-        <rename>cod_asig</rename>
-        <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>idasig</name>
-        <rename>idasig</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>384</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Insert &#x2f; Update</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>NotasLab</connection>
-    <commit>1000</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
-      <table>notas</table>
-      <key>
-        <name>calificacion</name>
-        <field>califc</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>nota</name>
-        <field>notnum</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>notpos</name>
-        <field>notpos</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>idalum</name>
-        <field>idalum</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>idasig</name>
-        <field>idasig</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>califc</name>
-        <rename>calificacion</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>notnum</name>
-        <rename>nota</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>notpos</name>
-        <rename>notpos</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>idalum</name>
-        <rename>idalum</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>idasig</name>
-        <rename>idasig</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>800</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Modified Java Script Value</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;var nombre &#x3d; &#x22;Prog2&#x22;&#xa;var nota &#x3d; prog2&#xa;</jsScript_script>
-      </jsScript>    </jsScripts>    <fields>      <field>        <name>nombre</name>
-        <rename>nombre</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>      <field>        <name>nota</name>
-        <rename>nota</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>    </fields>    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>272</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Number range</name>
-    <type>NumberRange</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <inputField>nota</inputField>
-    <outputField>calificacion</outputField>
-    <fallBackValue>unknown</fallBackValue>
-    <rules>
-      <rule>
-        <lower_bound>-1.7976931348623157E308</lower_bound>
-        <upper_bound>50.0</upper_bound>
-        <value>S</value>
-      </rule>
-      <rule>
-        <lower_bound>50.0</lower_bound>
-        <upper_bound>70.0</upper_bound>
-        <value>A</value>
-      </rule>
-      <rule>
-        <lower_bound>70.0</lower_bound>
-        <upper_bound>90.0</upper_bound>
-        <value>N</value>
-      </rule>
-      <rule>
-        <lower_bound>90.0</lower_bound>
-        <upper_bound>100.0</upper_bound>
-        <value>S</value>
-      </rule>
-      <rule>
-        <lower_bound>100.0</lower_bound>
-        <upper_bound>1.7976931348623157E308</upper_bound>
-        <value>M</value>
-      </rule>
-    </rules>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>80</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Sort rows</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>nota</name>
-        <ascending>Y</ascending>
-        <case_sensitive>Y</case_sensitive>
-        <collator_enabled>Y</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>608</xloc>
-      <yloc>80</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
@@ -1153,8 +743,8 @@
     </step>
 
   <step>
-    <name>Add sequence 2</name>
-    <type>Sequence</type>
+    <name>Mapping &#x28;sub-transformation&#x29;</name>
+    <type>Mapping</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1163,70 +753,33 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-      <valuename>notpos</valuename>
-      <use_database>N</use_database>
-      <connection>NotasLab</connection>
-      <schema/>
-      <seqname>SEQ_</seqname>
-      <use_counter>Y</use_counter>
-      <counter_name/>
-      <start_at>1</start_at>
-      <increment_by>1</increment_by>
-      <max_value>999999999</max_value>
-    <cluster_schema/>
-    <remotesteps>
+    <specification_method>filename</specification_method>
+    <trans_object_id/>
+    <trans_name/>
+    <filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;carga_not_mapping.ktr</filename>
+    <directory_path/>
+    <mappings>
       <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>704</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Database lookup 2</name>
-    <type>DBLookup</type>
+    <mapping>    <input_step/>
+    <output_step/>
+    <main_path>Y</main_path>
+    <rename_on_output>Y</rename_on_output>
     <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>NotasLab</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
-      <table>asignaturas</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>nombre</name>
-        <field>nombre</field>
-        <condition>LIKE</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>cod_asig</name>
-        <rename>cod_asig</rename>
-        <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>idasig</name>
-        <rename>idasig</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
+       <connector><parent>nombreProg2</parent><child>nombre</child></connector>
+       <connector><parent>prog2</parent><child>nota</child></connector>
+    </mapping>      </input>
+      <output>
+    <mapping>    <input_step/>
+    <output_step/>
+    <main_path>Y</main_path>
+    <rename_on_output>N</rename_on_output>
+    <description/>
+    </mapping>      </output>
+          <parameters>    <inherit_all_vars>Y</inherit_all_vars>
+    </parameters>
+    </mappings>
+    <allow_multiple_input>N</allow_multiple_input>
+    <allow_multiple_output>N</allow_multiple_output>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1235,15 +788,15 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>160</yloc>
+      <xloc>672</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Insert &#x2f; Update 2</name>
-    <type>InsertUpdate</type>
+    <name>Mapping &#x28;sub-transformation&#x29; 2</name>
+    <type>Mapping</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -1252,68 +805,33 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <connection>NotasLab</connection>
-    <commit>1000</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
-      <table>notas</table>
-      <key>
-        <name>calificacion</name>
-        <field>califc</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>nota</name>
-        <field>notnum</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>notpos</name>
-        <field>notpos</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>idalum</name>
-        <field>idalum</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>idasig</name>
-        <field>idasig</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>califc</name>
-        <rename>calificacion</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>notnum</name>
-        <rename>nota</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>notpos</name>
-        <rename>notpos</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>idalum</name>
-        <rename>idalum</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>idasig</name>
-        <rename>idasig</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
+    <specification_method>filename</specification_method>
+    <trans_object_id/>
+    <trans_name/>
+    <filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;carga_not_mapping.ktr</filename>
+    <directory_path/>
+    <mappings>
+      <input>
+    <mapping>    <input_step/>
+    <output_step/>
+    <main_path>Y</main_path>
+    <rename_on_output>Y</rename_on_output>
+    <description/>
+       <connector><parent>nombrePPS</parent><child>nombre</child></connector>
+       <connector><parent>pps</parent><child>nota</child></connector>
+    </mapping>      </input>
+      <output>
+    <mapping>    <input_step/>
+    <output_step/>
+    <main_path>Y</main_path>
+    <rename_on_output>N</rename_on_output>
+    <description/>
+    </mapping>      </output>
+          <parameters>    <inherit_all_vars>Y</inherit_all_vars>
+    </parameters>
+    </mappings>
+    <allow_multiple_input>N</allow_multiple_input>
+    <allow_multiple_output>N</allow_multiple_output>
     <cluster_schema/>
     <remotesteps>
       <input>
@@ -1322,14 +840,118 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>800</xloc>
+      <xloc>672</xloc>
       <yloc>160</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Modified Java Script Value 2</name>
+    <name>Mapping &#x28;sub-transformation&#x29; 3</name>
+    <type>Mapping</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <specification_method>filename</specification_method>
+    <trans_object_id/>
+    <trans_name/>
+    <filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;carga_not_mapping.ktr</filename>
+    <directory_path/>
+    <mappings>
+      <input>
+    <mapping>    <input_step/>
+    <output_step/>
+    <main_path>Y</main_path>
+    <rename_on_output>Y</rename_on_output>
+    <description/>
+       <connector><parent>nombreBBDD</parent><child>nombre</child></connector>
+       <connector><parent>bbdd</parent><child>nota</child></connector>
+    </mapping>      </input>
+      <output>
+    <mapping>    <input_step/>
+    <output_step/>
+    <main_path>Y</main_path>
+    <rename_on_output>N</rename_on_output>
+    <description/>
+    </mapping>      </output>
+          <parameters>    <inherit_all_vars>Y</inherit_all_vars>
+    </parameters>
+    </mappings>
+    <allow_multiple_input>N</allow_multiple_input>
+    <allow_multiple_output>N</allow_multiple_output>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>224</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Mapping &#x28;sub-transformation&#x29; 4</name>
+    <type>Mapping</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <specification_method>filename</specification_method>
+    <trans_object_id/>
+    <trans_name/>
+    <filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;carga_not_mapping.ktr</filename>
+    <directory_path/>
+    <mappings>
+      <input>
+    <mapping>    <input_step/>
+    <output_step/>
+    <main_path>Y</main_path>
+    <rename_on_output>Y</rename_on_output>
+    <description/>
+       <connector><parent>nombreADW</parent><child>nombre</child></connector>
+       <connector><parent>adw</parent><child>nota</child></connector>
+    </mapping>      </input>
+      <output>
+    <mapping>    <input_step/>
+    <output_step/>
+    <main_path>Y</main_path>
+    <rename_on_output>N</rename_on_output>
+    <description/>
+    </mapping>      </output>
+          <parameters>    <inherit_all_vars>Y</inherit_all_vars>
+    </parameters>
+    </mappings>
+    <allow_multiple_input>N</allow_multiple_input>
+    <allow_multiple_output>N</allow_multiple_output>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>672</xloc>
+      <yloc>288</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Modified Java Script Value</name>
     <type>ScriptValueMod</type>
     <description/>
     <distribute>N</distribute>
@@ -1343,330 +965,27 @@
     <optimizationLevel>9</optimizationLevel>
     <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;var nombre &#x3d; &#x22;PPS&#x22;&#xa;var nota &#x3d; pps&#xa;</jsScript_script>
-      </jsScript>    </jsScripts>    <fields>      <field>        <name>nombre</name>
-        <rename>nombre</rename>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;var nombreProg2 &#x3d; &#x22;Prog2&#x22;&#xa;var nombrePPS &#x3d; &#x22;PPS&#x22;&#xa;var nombreBBDD &#x3d; &#x22;BBDD&#x22;&#xa;var nombreADW &#x3d; &#x22;ADW&#x22;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>nombreProg2</name>
+        <rename>nombreProg2</rename>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
         <replace>N</replace>
-      </field>      <field>        <name>nota</name>
-        <rename>nota</rename>
+      </field>      <field>        <name>nombrePPS</name>
+        <rename>nombrePPS</rename>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
         <replace>N</replace>
-      </field>    </fields>    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>272</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Number range 2</name>
-    <type>NumberRange</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <inputField>nota</inputField>
-    <outputField>calificacion</outputField>
-    <fallBackValue>unknown</fallBackValue>
-    <rules>
-      <rule>
-        <lower_bound>-1.7976931348623157E308</lower_bound>
-        <upper_bound>50.0</upper_bound>
-        <value>S</value>
-      </rule>
-      <rule>
-        <lower_bound>50.0</lower_bound>
-        <upper_bound>70.0</upper_bound>
-        <value>A</value>
-      </rule>
-      <rule>
-        <lower_bound>70.0</lower_bound>
-        <upper_bound>90.0</upper_bound>
-        <value>N</value>
-      </rule>
-      <rule>
-        <lower_bound>90.0</lower_bound>
-        <upper_bound>100.0</upper_bound>
-        <value>S</value>
-      </rule>
-      <rule>
-        <lower_bound>100.0</lower_bound>
-        <upper_bound>1.7976931348623157E308</upper_bound>
-        <value>M</value>
-      </rule>
-    </rules>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Sort rows 2</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>nota</name>
-        <ascending>Y</ascending>
-        <case_sensitive>Y</case_sensitive>
-        <collator_enabled>Y</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>608</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Add sequence 3</name>
-    <type>Sequence</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-      <valuename>notpos</valuename>
-      <use_database>N</use_database>
-      <connection>NotasLab</connection>
-      <schema/>
-      <seqname>SEQ_</seqname>
-      <use_counter>Y</use_counter>
-      <counter_name/>
-      <start_at>1</start_at>
-      <increment_by>1</increment_by>
-      <max_value>999999999</max_value>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>704</xloc>
-      <yloc>240</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Database lookup 3</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>NotasLab</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
-      <table>asignaturas</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>nombre</name>
-        <field>nombre</field>
-        <condition>LIKE</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>cod_asig</name>
-        <rename>cod_asig</rename>
-        <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>idasig</name>
-        <rename>idasig</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>384</xloc>
-      <yloc>240</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Insert &#x2f; Update 3</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>NotasLab</connection>
-    <commit>1000</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
-      <table>notas</table>
-      <key>
-        <name>calificacion</name>
-        <field>califc</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>nota</name>
-        <field>notnum</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>notpos</name>
-        <field>notpos</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>idalum</name>
-        <field>idalum</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>idasig</name>
-        <field>idasig</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>califc</name>
-        <rename>calificacion</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>notnum</name>
-        <rename>nota</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>notpos</name>
-        <rename>notpos</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>idalum</name>
-        <rename>idalum</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>idasig</name>
-        <rename>idasig</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>800</xloc>
-      <yloc>240</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Modified Java Script Value 3</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;var nombre &#x3d; &#x22;BBDD&#x22;&#xa;var nota &#x3d; bbdd&#xa;</jsScript_script>
-      </jsScript>    </jsScripts>    <fields>      <field>        <name>nombre</name>
-        <rename>nombre</rename>
+      </field>      <field>        <name>nombreBBDD</name>
+        <rename>nombreBBDD</rename>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
         <replace>N</replace>
-      </field>      <field>        <name>nota</name>
-        <rename>nota</rename>
+      </field>      <field>        <name>nombreADW</name>
+        <rename>nombreADW</rename>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -1679,420 +998,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>240</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Number range 3</name>
-    <type>NumberRange</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <inputField>nota</inputField>
-    <outputField>calificacion</outputField>
-    <fallBackValue>unknown</fallBackValue>
-    <rules>
-      <rule>
-        <lower_bound>-1.7976931348623157E308</lower_bound>
-        <upper_bound>50.0</upper_bound>
-        <value>S</value>
-      </rule>
-      <rule>
-        <lower_bound>50.0</lower_bound>
-        <upper_bound>70.0</upper_bound>
-        <value>A</value>
-      </rule>
-      <rule>
-        <lower_bound>70.0</lower_bound>
-        <upper_bound>90.0</upper_bound>
-        <value>N</value>
-      </rule>
-      <rule>
-        <lower_bound>90.0</lower_bound>
-        <upper_bound>100.0</upper_bound>
-        <value>S</value>
-      </rule>
-      <rule>
-        <lower_bound>100.0</lower_bound>
-        <upper_bound>1.7976931348623157E308</upper_bound>
-        <value>M</value>
-      </rule>
-    </rules>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>240</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Sort rows 3</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>nota</name>
-        <ascending>Y</ascending>
-        <case_sensitive>Y</case_sensitive>
-        <collator_enabled>Y</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>608</xloc>
-      <yloc>240</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Add sequence 4</name>
-    <type>Sequence</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-      <valuename>notpos</valuename>
-      <use_database>N</use_database>
-      <connection>NotasLab</connection>
-      <schema/>
-      <seqname>SEQ_</seqname>
-      <use_counter>Y</use_counter>
-      <counter_name/>
-      <start_at>1</start_at>
-      <increment_by>1</increment_by>
-      <max_value>999999999</max_value>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>704</xloc>
-      <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Database lookup 4</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>NotasLab</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
-      <table>asignaturas</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>nombre</name>
-        <field>nombre</field>
-        <condition>LIKE</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>cod_asig</name>
-        <rename>cod_asig</rename>
-        <default/>
-        <type>None</type>
-      </value>
-      <value>
-        <name>idasig</name>
-        <rename>idasig</rename>
-        <default/>
-        <type>None</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>384</xloc>
-      <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Insert &#x2f; Update 4</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>NotasLab</connection>
-    <commit>1000</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
-      <table>notas</table>
-      <key>
-        <name>calificacion</name>
-        <field>califc</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>nota</name>
-        <field>notnum</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>notpos</name>
-        <field>notpos</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>idalum</name>
-        <field>idalum</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <key>
-        <name>idasig</name>
-        <field>idasig</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>califc</name>
-        <rename>calificacion</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>notnum</name>
-        <rename>nota</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>notpos</name>
-        <rename>notpos</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>idalum</name>
-        <rename>idalum</rename>
-        <update>Y</update>
-      </value>
-      <value>
-        <name>idasig</name>
-        <rename>idasig</rename>
-        <update>Y</update>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>800</xloc>
-      <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Modified Java Script Value 4</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;var nombre &#x3d; &#x22;ADW&#x22;&#xa;var nota &#x3d; adw&#xa;</jsScript_script>
-      </jsScript>    </jsScripts>    <fields>      <field>        <name>nombre</name>
-        <rename>nombre</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>      <field>        <name>nota</name>
-        <rename>nota</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>    </fields>    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>272</xloc>
-      <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Number range 4</name>
-    <type>NumberRange</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <inputField>nota</inputField>
-    <outputField>calificacion</outputField>
-    <fallBackValue>unknown</fallBackValue>
-    <rules>
-      <rule>
-        <lower_bound>-1.7976931348623157E308</lower_bound>
-        <upper_bound>50.0</upper_bound>
-        <value>S</value>
-      </rule>
-      <rule>
-        <lower_bound>50.0</lower_bound>
-        <upper_bound>70.0</upper_bound>
-        <value>A</value>
-      </rule>
-      <rule>
-        <lower_bound>70.0</lower_bound>
-        <upper_bound>90.0</upper_bound>
-        <value>N</value>
-      </rule>
-      <rule>
-        <lower_bound>90.0</lower_bound>
-        <upper_bound>100.0</upper_bound>
-        <value>S</value>
-      </rule>
-      <rule>
-        <lower_bound>100.0</lower_bound>
-        <upper_bound>1.7976931348623157E308</upper_bound>
-        <value>M</value>
-      </rule>
-    </rules>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>496</xloc>
-      <yloc>320</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Sort rows 4</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>nota</name>
-        <ascending>Y</ascending>
-        <case_sensitive>Y</case_sensitive>
-        <collator_enabled>Y</collator_enabled>
-        <collator_strength>0</collator_strength>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>608</xloc>
-      <yloc>320</yloc>
+      <xloc>224</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
