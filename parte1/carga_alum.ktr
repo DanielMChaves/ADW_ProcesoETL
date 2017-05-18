@@ -448,7 +448,7 @@
     <access>Native</access>
     <database>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</database>
     <port>&#x24;&#x7b;PDI_LAB_MYSQL_PORT&#x7d;</port>
-    <username>root</username>
+    <username>&#x24;&#x7b;PDI_LAB_MYSQL_USER&#x7d;</username>
     <password>Encrypted 2be98afc86aa7f2e4fa08af6ac681b888</password>
     <servername/>
     <data_tablespace/>
@@ -470,18 +470,18 @@
   </connection>
   <order>
     <hop>
-      <from>Text file input</from>
-      <to>Modified Java Script Value</to>
+      <from>Input Files</from>
+      <to>Name Split</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Modified Java Script Value</from>
-      <to>Insert &#x2f; Update</to>
+      <from>Name Split</from>
+      <to>Insert</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Insert &#x2f; Update</name>
+    <name>Insert</name>
     <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
@@ -550,14 +550,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>600</xloc>
-      <yloc>100</yloc>
+      <xloc>400</xloc>
+      <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Modified Java Script Value</name>
+    <name>Name Split</name>
     <type>ScriptValueMod</type>
     <description/>
     <distribute>Y</distribute>
@@ -598,14 +598,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
+      <xloc>240</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Text file input</name>
+    <name>Input Files</name>
     <type>TextFileInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -797,7 +797,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>160</xloc>
+      <xloc>96</xloc>
       <yloc>96</yloc>
       <draw>Y</draw>
     </GUI>

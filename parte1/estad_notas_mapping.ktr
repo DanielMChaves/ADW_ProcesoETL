@@ -442,7 +442,7 @@
     <access>Native</access>
     <database>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</database>
     <port>&#x24;&#x7b;PDI_LAB_MYSQL_PORT&#x7d;</port>
-    <username>root</username>
+    <username>&#x24;&#x7b;PDI_LAB_MYSQL_USER&#x7d;</username>
     <password>Encrypted 2be98afc86aa7f2e4fa08af6ac681b888</password>
     <servername/>
     <data_tablespace/>
@@ -464,28 +464,28 @@
   </connection>
   <order>
     <hop>
-      <from>Database lookup</from>
+      <from>Insert</from>
+      <to>Mapping Out</to>
+      <enabled>Y</enabled>
+    </hop>
+    <hop>
+      <from>Mapping Input</from>
       <to>Group by</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Group by</from>
-      <to>Insert &#x2f; Update</to>
+      <to>Get Cod. Asig</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Mapping input specification</from>
-      <to>Database lookup</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Insert &#x2f; Update</from>
-      <to>Mapping output specification</to>
+      <from>Get Cod. Asig</from>
+      <to>Insert</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Database lookup</name>
+    <name>Get Cod. Asig</name>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
@@ -526,7 +526,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>304</xloc>
+      <xloc>368</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
@@ -553,7 +553,7 @@
       <give_back_row>N</give_back_row>
       <group>
         <field>
-          <name>cod_asig</name>
+          <name>nombre</name>
         </field>
       </group>
       <fields>
@@ -584,14 +584,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>448</xloc>
+      <xloc>256</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Insert &#x2f; Update</name>
+    <name>Insert</name>
     <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
@@ -613,11 +613,6 @@
         <condition>&#x3d;</condition>
         <name2/>
       </key>
-      <value>
-        <name>nombre</name>
-        <rename>nombre</rename>
-        <update>N</update>
-      </value>
       <value>
         <name>cod_asig</name>
         <rename>cod_asig</rename>
@@ -647,14 +642,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>592</xloc>
+      <xloc>480</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Mapping input specification</name>
+    <name>Mapping Input</name>
     <type>MappingInput</type>
     <description/>
     <distribute>N</distribute>
@@ -677,7 +672,7 @@
         <length>-1</length>
         <precision>-1</precision>
       </field>
-        <select_unspecified>N</select_unspecified>
+        <select_unspecified>Y</select_unspecified>
     </fields>
     <cluster_schema/>
     <remotesteps>
@@ -694,7 +689,7 @@
     </step>
 
   <step>
-    <name>Mapping output specification</name>
+    <name>Mapping Out</name>
     <type>MappingOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -712,7 +707,7 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>752</xloc>
+      <xloc>608</xloc>
       <yloc>144</yloc>
       <draw>Y</draw>
     </GUI>

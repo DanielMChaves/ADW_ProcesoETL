@@ -16,11 +16,6 @@
         <default_value>.</default_value>
         <description/>
       </parameter>
-      <parameter>
-        <name>CONFIG_DIR_2</name>
-        <default_value>&#x2f;home&#x2f;santiago&#x2f;MEGAsync&#x2f;TGD&#x2f;Labs&#x2f;PDI&#x2f;Notas17&#x2f;Lab</default_value>
-        <description/>
-      </parameter>
     </parameters>
     <slaveservers>
     </slaveservers>
@@ -394,7 +389,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>544</xloc>
+      <xloc>496</xloc>
       <yloc>256</yloc>
     </entry>
     <entry>

@@ -6,6 +6,7 @@
     <extended_description/>
     <trans_version/>
     <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
     </parameters>
@@ -442,7 +443,7 @@
     <access>Native</access>
     <database>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</database>
     <port>&#x24;&#x7b;PDI_LAB_MYSQL_PORT&#x7d;</port>
-    <username>root</username>
+    <username>&#x24;&#x7b;PDI_LAB_MYSQL_USER&#x7d;</username>
     <password>Encrypted 2be98afc86aa7f2e4fa08af6ac681b888</password>
     <servername/>
     <data_tablespace/>
@@ -464,33 +465,33 @@
   </connection>
   <order>
     <hop>
-      <from>Database lookup</from>
-      <to>Number range</to>
+      <from>Get Cod. Asig &#x26; Id Asig</from>
+      <to>Califications</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Number range</from>
-      <to>Sort rows</to>
+      <from>Califications</from>
+      <to>Ascending Order</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Sort rows</from>
+      <from>Ascending Order</from>
       <to>Add sequence</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Mapping input specification</from>
-      <to>Database lookup</to>
+      <from>Mapping Input</from>
+      <to>Get Cod. Asig &#x26; Id Asig</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
       <from>Add sequence</from>
-      <to>Insert &#x2f; Update</to>
+      <to>Insert</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Insert &#x2f; Update</from>
-      <to>Mapping output specification</to>
+      <from>Insert</from>
+      <to>Mapping Out</to>
       <enabled>Y</enabled>
     </hop>
   </order>
@@ -523,14 +524,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>608</xloc>
-      <yloc>176</yloc>
+      <xloc>576</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Database lookup</name>
+    <name>Get Cod. Asig &#x26; Id Asig</name>
     <type>DBLookup</type>
     <description/>
     <distribute>N</distribute>
@@ -577,14 +578,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>272</xloc>
-      <yloc>176</yloc>
+      <xloc>208</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Insert &#x2f; Update</name>
+    <name>Insert</name>
     <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
@@ -664,14 +665,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>720</xloc>
-      <yloc>176</yloc>
+      <xloc>672</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Mapping input specification</name>
+    <name>Mapping Input</name>
     <type>MappingInput</type>
     <description/>
     <distribute>Y</distribute>
@@ -704,14 +705,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>112</xloc>
-      <yloc>176</yloc>
+      <xloc>80</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Mapping output specification</name>
+    <name>Mapping Out</name>
     <type>MappingOutput</type>
     <description/>
     <distribute>Y</distribute>
@@ -729,14 +730,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>880</xloc>
-      <yloc>176</yloc>
+      <xloc>768</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Number range</name>
+    <name>Califications</name>
     <type>NumberRange</type>
     <description/>
     <distribute>N</distribute>
@@ -784,14 +785,14 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>384</xloc>
-      <yloc>176</yloc>
+      <xloc>352</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Sort rows</name>
+    <name>Ascending Order</name>
     <type>SortRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -826,8 +827,8 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>496</xloc>
-      <yloc>176</yloc>
+      <xloc>464</xloc>
+      <yloc>112</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
