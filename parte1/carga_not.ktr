@@ -465,86 +465,23 @@
   </connection>
   <order>
     <hop>
-      <from>Database VAlue Lookup 2</from>
-      <to>Mapping &#x28;sub-transformation&#x29;</to>
+      <from>Text file input 2</from>
+      <to>Database VAlue Lookup 2 2</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Database VAlue Lookup 2</from>
-      <to>Mapping &#x28;sub-transformation&#x29; 2</to>
+      <from>Database VAlue Lookup 2 2</from>
+      <to>Row Normaliser</to>
       <enabled>Y</enabled>
     </hop>
     <hop>
-      <from>Database VAlue Lookup 2</from>
-      <to>Mapping &#x28;sub-transformation&#x29; 3</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Database VAlue Lookup 2</from>
-      <to>Mapping &#x28;sub-transformation&#x29; 4</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Text file input</from>
-      <to>Modified Java Script Value</to>
-      <enabled>Y</enabled>
-    </hop>
-    <hop>
-      <from>Modified Java Script Value</from>
-      <to>Database VAlue Lookup 2</to>
+      <from>Row Normaliser</from>
+      <to>Mapping &#x28;sub-transformation&#x29; 6</to>
       <enabled>Y</enabled>
     </hop>
   </order>
   <step>
-    <name>Database VAlue Lookup 2</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <connection>NotasLab</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
-      <table>alumnos</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>cod_matri</name>
-        <field>matricula</field>
-        <condition>&#x3d;</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>idalum</name>
-        <rename>idalum</rename>
-        <default/>
-        <type>Integer</type>
-      </value>
-    </lookup>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>416</xloc>
-      <yloc>192</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Text file input</name>
+    <name>Text file input 2</name>
     <type>TextFileInput</type>
     <description/>
     <distribute>N</distribute>
@@ -720,7 +657,7 @@
     <line_number_files_extension>line</line_number_files_extension>
     <date_format_lenient>Y</date_format_lenient>
     <date_format_locale>es_ES</date_format_locale>
-    <shortFileFieldName>titulo</shortFileFieldName>
+    <shortFileFieldName/>
     <pathFieldName/>
     <hiddenFieldName/>
     <lastModificationTimeFieldName/>
@@ -736,15 +673,15 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>48</xloc>
-      <yloc>192</yloc>
+      <xloc>304</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Mapping &#x28;sub-transformation&#x29;</name>
-    <type>Mapping</type>
+    <name>Row Normaliser</name>
+    <type>Normaliser</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -753,34 +690,20 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <specification_method>filename</specification_method>
-    <trans_object_id/>
-    <trans_name/>
-    <filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;carga_not_mapping.ktr</filename>
-    <directory_path/>
-    <mappings>
-      <input>
-    <mapping>    <input_step/>
-    <output_step/>
-    <main_path>Y</main_path>
-    <rename_on_output>Y</rename_on_output>
-    <description/>
-       <connector><parent>nombreProg2</parent><child>nombre</child></connector>
-       <connector><parent>prog2</parent><child>nota</child></connector>
-    </mapping>      </input>
-      <output>
-    <mapping>    <input_step/>
-    <output_step/>
-    <main_path>Y</main_path>
-    <rename_on_output>N</rename_on_output>
-    <description/>
-    </mapping>      </output>
-          <parameters>    <inherit_all_vars>Y</inherit_all_vars>
-    </parameters>
-    </mappings>
-    <allow_multiple_input>N</allow_multiple_input>
-    <allow_multiple_output>N</allow_multiple_output>
-    <cluster_schema/>
+   <typefield>fieldname</typefield>
+    <fields>      <field>        <name>prog2</name>
+        <value>prog2</value>
+        <norm>value</norm>
+        </field>      <field>        <name>pps</name>
+        <value>pps</value>
+        <norm>value</norm>
+        </field>      <field>        <name>bbdd</name>
+        <value>bbdd</value>
+        <norm>value</norm>
+        </field>      <field>        <name>adw</name>
+        <value>adw</value>
+        <norm>value</norm>
+        </field>      </fields>    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -788,171 +711,15 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>672</xloc>
-      <yloc>96</yloc>
+      <xloc>608</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
 
   <step>
-    <name>Mapping &#x28;sub-transformation&#x29; 2</name>
-    <type>Mapping</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <specification_method>filename</specification_method>
-    <trans_object_id/>
-    <trans_name/>
-    <filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;carga_not_mapping.ktr</filename>
-    <directory_path/>
-    <mappings>
-      <input>
-    <mapping>    <input_step/>
-    <output_step/>
-    <main_path>Y</main_path>
-    <rename_on_output>Y</rename_on_output>
-    <description/>
-       <connector><parent>nombrePPS</parent><child>nombre</child></connector>
-       <connector><parent>pps</parent><child>nota</child></connector>
-    </mapping>      </input>
-      <output>
-    <mapping>    <input_step/>
-    <output_step/>
-    <main_path>Y</main_path>
-    <rename_on_output>N</rename_on_output>
-    <description/>
-    </mapping>      </output>
-          <parameters>    <inherit_all_vars>Y</inherit_all_vars>
-    </parameters>
-    </mappings>
-    <allow_multiple_input>N</allow_multiple_input>
-    <allow_multiple_output>N</allow_multiple_output>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>672</xloc>
-      <yloc>160</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Mapping &#x28;sub-transformation&#x29; 3</name>
-    <type>Mapping</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <specification_method>filename</specification_method>
-    <trans_object_id/>
-    <trans_name/>
-    <filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;carga_not_mapping.ktr</filename>
-    <directory_path/>
-    <mappings>
-      <input>
-    <mapping>    <input_step/>
-    <output_step/>
-    <main_path>Y</main_path>
-    <rename_on_output>Y</rename_on_output>
-    <description/>
-       <connector><parent>nombreBBDD</parent><child>nombre</child></connector>
-       <connector><parent>bbdd</parent><child>nota</child></connector>
-    </mapping>      </input>
-      <output>
-    <mapping>    <input_step/>
-    <output_step/>
-    <main_path>Y</main_path>
-    <rename_on_output>N</rename_on_output>
-    <description/>
-    </mapping>      </output>
-          <parameters>    <inherit_all_vars>Y</inherit_all_vars>
-    </parameters>
-    </mappings>
-    <allow_multiple_input>N</allow_multiple_input>
-    <allow_multiple_output>N</allow_multiple_output>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>672</xloc>
-      <yloc>224</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Mapping &#x28;sub-transformation&#x29; 4</name>
-    <type>Mapping</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-    <partitioning>
-      <method>none</method>
-      <schema_name/>
-    </partitioning>
-    <specification_method>filename</specification_method>
-    <trans_object_id/>
-    <trans_name/>
-    <filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;carga_not_mapping.ktr</filename>
-    <directory_path/>
-    <mappings>
-      <input>
-    <mapping>    <input_step/>
-    <output_step/>
-    <main_path>Y</main_path>
-    <rename_on_output>Y</rename_on_output>
-    <description/>
-       <connector><parent>nombreADW</parent><child>nombre</child></connector>
-       <connector><parent>adw</parent><child>nota</child></connector>
-    </mapping>      </input>
-      <output>
-    <mapping>    <input_step/>
-    <output_step/>
-    <main_path>Y</main_path>
-    <rename_on_output>N</rename_on_output>
-    <description/>
-    </mapping>      </output>
-          <parameters>    <inherit_all_vars>Y</inherit_all_vars>
-    </parameters>
-    </mappings>
-    <allow_multiple_input>N</allow_multiple_input>
-    <allow_multiple_output>N</allow_multiple_output>
-    <cluster_schema/>
-    <remotesteps>
-      <input>
-      </input>
-      <output>
-      </output>
-    </remotesteps>
-    <GUI>
-      <xloc>672</xloc>
-      <yloc>288</yloc>
-      <draw>Y</draw>
-    </GUI>
-    </step>
-
-  <step>
-    <name>Modified Java Script Value</name>
-    <type>ScriptValueMod</type>
+    <name>Database VAlue Lookup 2 2</name>
+    <type>DBLookup</type>
     <description/>
     <distribute>N</distribute>
     <custom_distribution/>
@@ -961,36 +728,30 @@
       <method>none</method>
       <schema_name/>
     </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;var nombreProg2 &#x3d; &#x22;Prog2&#x22;&#xa;var nombrePPS &#x3d; &#x22;PPS&#x22;&#xa;var nombreBBDD &#x3d; &#x22;BBDD&#x22;&#xa;var nombreADW &#x3d; &#x22;ADW&#x22;</jsScript_script>
-      </jsScript>    </jsScripts>    <fields>      <field>        <name>nombreProg2</name>
-        <rename>nombreProg2</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>      <field>        <name>nombrePPS</name>
-        <rename>nombrePPS</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>      <field>        <name>nombreBBDD</name>
-        <rename>nombreBBDD</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>      <field>        <name>nombreADW</name>
-        <rename>nombreADW</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>    </fields>    <cluster_schema/>
+    <connection>NotasLab</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>&#x24;&#x7b;PDI_LAB_MYSQL_DATABASE&#x7d;</schema>
+      <table>alumnos</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>cod_matri</name>
+        <field>matricula</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>idalum</name>
+        <rename>idalum</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+    <cluster_schema/>
     <remotesteps>
       <input>
       </input>
@@ -998,8 +759,60 @@
       </output>
     </remotesteps>
     <GUI>
-      <xloc>224</xloc>
-      <yloc>192</yloc>
+      <xloc>464</xloc>
+      <yloc>176</yloc>
+      <draw>Y</draw>
+    </GUI>
+    </step>
+
+  <step>
+    <name>Mapping &#x28;sub-transformation&#x29; 6</name>
+    <type>Mapping</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+    <partitioning>
+      <method>none</method>
+      <schema_name/>
+    </partitioning>
+    <specification_method>filename</specification_method>
+    <trans_object_id/>
+    <trans_name/>
+    <filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;carga_not_mapping.ktr</filename>
+    <directory_path/>
+    <mappings>
+      <input>
+    <mapping>    <input_step/>
+    <output_step/>
+    <main_path>Y</main_path>
+    <rename_on_output>Y</rename_on_output>
+    <description/>
+       <connector><parent>fieldname</parent><child>nombre</child></connector>
+       <connector><parent>value</parent><child>nota</child></connector>
+    </mapping>      </input>
+      <output>
+    <mapping>    <input_step/>
+    <output_step/>
+    <main_path>Y</main_path>
+    <rename_on_output>N</rename_on_output>
+    <description/>
+    </mapping>      </output>
+          <parameters>    <inherit_all_vars>Y</inherit_all_vars>
+    </parameters>
+    </mappings>
+    <allow_multiple_input>N</allow_multiple_input>
+    <allow_multiple_output>N</allow_multiple_output>
+    <cluster_schema/>
+    <remotesteps>
+      <input>
+      </input>
+      <output>
+      </output>
+    </remotesteps>
+    <GUI>
+      <xloc>768</xloc>
+      <yloc>176</yloc>
       <draw>Y</draw>
     </GUI>
     </step>
